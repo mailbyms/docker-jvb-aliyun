@@ -4,6 +4,7 @@ FROM jitsi/jvb:stable-4857
 
 RUN apt-get update \
     && apt-get install gnupg1 dirmngr \
+    && apt-get clean \
     && apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 3B4FE6ACC0B21F32 \
     && cd /etc/apt \
     && mv sources.list sources.list.bak \
